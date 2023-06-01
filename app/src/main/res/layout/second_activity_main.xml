@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/second_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/second_toolbar_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            tools:layout_editor_absoluteX="37dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Events"
+            style="@style/TextAppearance2"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/LinearLayout_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="自訂"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="情侶"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="生日"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="考試"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="減肥"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="15dp"
+                android:text="戒菸"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColorHint="#19000000"
+            android:hint="請輸入標題"
+            android:drawableBottom="@drawable/line"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/imageView_eventIcon"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:src="@drawable/check"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:text="日期"
+            android:textColor="@color/toolbar_color"
+            android:textSize="20dp"
+            android:theme="@style/TextAppearance3" />
+
+        <TextView
+            android:id="@+id/textView_showDate"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/toolbar_color"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="right"/>
+
+        <ImageView
+            android:id="@+id/imageView_click"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/down_arrow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_calendar"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="日曆"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:visibility="gone" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:theme="@style/myDatePicker" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

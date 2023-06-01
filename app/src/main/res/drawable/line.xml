@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/toolbar_color"/>
+    <size
+        android:height="35dp"
+        android:width="412dp"/>
+    <stroke
+        android:color="@color/white"
+        android:width="15dp"/>
+</shape>
