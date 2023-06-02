@@ -119,7 +119,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(SecondActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
-                            //                          當確定選取日期時的監聽事件
+//                          當確定選取日期時的監聽事件
                             @Override
                             public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
                                 Date date = new Date(selectedYear, selectedMonth, selectedDay - 1);
